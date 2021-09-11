@@ -1,0 +1,1 @@
+# seletivo-shopper-frontend
