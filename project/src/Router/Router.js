@@ -2,6 +2,8 @@ import React from 'react';
 import Error from '../pages/Error/Error';
 import Home from '../pages/Home/Home';
 import Products from '../pages/Products/Products';
+import Checkout from '../pages/checkout/Checkout';
+import { Stock } from '../pages/dataBase/Stock';
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
@@ -17,13 +19,13 @@ const Router = () => {
                 <Products/>
             </Route>
 
-            {/* <Route exact path='/carrinho'>
-                <null/>
+            <Route exact path='/checkout'>
+                <Checkout/>
             </Route>
 
-            <Route exact path='/finalizando-pedido'>
-                <null/>
-            </Route> */}
+            <Route exact path='/data-base-stock'>
+                <Stock/>
+            </Route>
 
             <Route>
                 <Error/>

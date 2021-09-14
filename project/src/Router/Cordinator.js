@@ -7,10 +7,10 @@ export const goToProducts = (history) => {
     history.push(`/products`)
 }
 
-// export const goToCard = (history) => {
-//     history.push(`/carrinho`)
-// }
+export const goToCheckout = (history) => {
+    history.push(`/checkout`)
+}
 
-// export const goCheckout = (history) => {
-//     history.push(`/finalizando-pedido`)
-// }
+export const goToDB = (history) => {
+    history.push(`/data-base-stock`)
+}

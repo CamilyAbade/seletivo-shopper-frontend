@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colorPrimary, colorSecondary } from '../../Assets/Colors'
+import { colorPrimary, colorSecondary } from '../../Assets/constants/Colors'
 
 export const Bloco = styled.div `
     background-color: ${colorPrimary};
@@ -21,9 +21,8 @@ export const Bloco = styled.div `
         border-radius: 10px;
         cursor: pointer;
         &:hover{
-            background-color: black;
-            color: white;
-            border: 2px solid ${colorSecondary};
+            background-color: ${colorSecondary};
+            color: ${colorPrimary};
         }
     }
 `

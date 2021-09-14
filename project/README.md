@@ -1,4 +1,4 @@
-<div Align='center'>
+<!-- <div Align='center'>
   <img src='./public/favicon.png' width='120' />
 
   # Desafio de recrutamento da Compasso UOL
@@ -61,4 +61,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 Feito com ❤️ por Camily Abade 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Camily-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/camily-abade/)](https://www.linkedin.com/in/camily-abade-4a663919a/) 
-[![Gmail Badge](https://img.shields.io/badge/-camily.abade@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:camily.abade@gmail.com)](mailto:camily.abade@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-camily.abade@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:camily.abade@gmail.com)](mailto:camily.abade@gmail.com) -->

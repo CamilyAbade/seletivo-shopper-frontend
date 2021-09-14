@@ -1,32 +1,33 @@
+import {Txt, Img, ContentHome} from './HomeStyled';
+import ImgShopMobile from '../../Assets/imgs/ImgShopMobile.jpg';
+import  {Header} from '../../Components/Header/Header' 
+import {ButtonPrimary} from '../../Components/Button/ButtonPrimary/ButtonPrimary'
 import { goToProducts } from '../../Router/Cordinator';
-import { useHistory } from 'react-router';
-import {Header, Txt, Img, SectionHome} from './HomeStyled';
-import imagemCompras from './imgHome.jpg'; 
-import LOGO from './LOGO.png'
+import { useHistory } from 'react-router-dom';
+import {text1PagHome, text2PagHome, text3PagHome, buttonToPagProduct} from '../../Assets/constants/Text'
+
 
 const Home = () => {
-  const history = useHistory()
-    
+    const history = useHistory()
     return(
       <>
-        <Header>
-          <img src={LOGO}/>
-        </Header>
+        <Header/>
 
-        <SectionHome>
+        <ContentHome>
           <Txt>
-            <h3>Bem vindo(a) á Shopper :)</h3>
+            <h3>{text1PagHome}</h3>
             <br/>
-            <h1>Aqui você compra</h1>
-            <h1>Sem ir ao mercado.</h1>
-            <button onClick={() => goToProducts(history)}>Ir para as compras</button>
+            <h1>{text2PagHome}</h1>
+            <h1>{text3PagHome}</h1>
+
+            <ButtonPrimary onClick = {() => goToProducts(history)} buttonText={buttonToPagProduct} />
           </Txt>
 
           <Img>
-            <img src={imagemCompras}/>
+            <img src={ImgShopMobile}/>
           </Img>
 
-        </SectionHome>
+        </ContentHome>
     </>
     )
 }
