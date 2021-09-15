@@ -20,7 +20,7 @@ export function postAndPut(input) {
 
 
   const putStock = () => {
-    const cartProducts = JSON.parse(localStorage.getItem('carrinho de Produtos'))
+    const cartProducts = JSON.parse(localStorage.getItem('productsCart'))
     const productsDB = JSON.parse(localStorage.getItem('stock'))
     var qtyProducts = {}
 
@@ -30,17 +30,20 @@ export function postAndPut(input) {
       var stock = productsDB[key].qty_stock
       qtyProducts[id] = { id: id, stock: stock }
     }
+    console.log('CART PRODUCTS', cartProducts)
 
     for (let key in cartProducts) {
       var boughtQty = cartProducts[key].qty
       var availableQty = qtyProducts[key].stock
       var idProduct = qtyProducts[key].id
       var StockUpdate = availableQty - boughtQty
-
+      console.log('ID: ', idProduct)
+    
       const body = {
         "id": idProduct,
         "qty_stock": StockUpdate
       }
+
 
       axios.put(`${BASE_URL}/stock/update`, body)
         .then((res) => {

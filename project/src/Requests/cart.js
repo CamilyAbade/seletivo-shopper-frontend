@@ -14,7 +14,7 @@ export function AddToCart(id, name, price, setCart, cart, setTotalPrice, stock) 
       }
 
       else{
-          alert('Aquantidade solicitada está em falta')
+          alert('Aquantidade solicitada está em')
           cart[key].qty = stock
         }
         localStorage.setItem("productsCart", JSON.stringify(cart));
