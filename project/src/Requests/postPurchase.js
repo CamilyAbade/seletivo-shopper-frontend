@@ -47,7 +47,7 @@ export function postAndPut(input) {
         .then((res) => {
           alert('Banco de estoque alterado com sucesso!')
           localStorage.removeItem('productsCart');
-
+          localStorage.removeItem('FormatCart');
 
         })
         .catch((err) => {
