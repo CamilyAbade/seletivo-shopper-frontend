@@ -21,7 +21,7 @@ export function Form() {
   const postNewPurchase = (event) => {
       event.preventDefault()
       postAndPut(body)
-    //   cleanFields()
+      cleanFields()
   }
 
 

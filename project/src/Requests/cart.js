@@ -9,19 +9,18 @@ export function AddToCart(id, name, price, setCart, cart, setTotalPrice, stock) 
     tempCart[id]["qty"] += 1
   }
 
-    for (let key in cart) {
-      if(cart[key].qty <= stock){
-      }
-
-      else{
-          alert('Aquantidade solicitada está em')
-          cart[key].qty = stock
-        }
-        localStorage.setItem("productsCart", JSON.stringify(cart));
+  for (let key in cart) {
+    if (cart[key].qty <= stock) {
     }
-    setCart(tempCart)
-    SumPrice(cart, setTotalPrice)
-    formatCart(cart)
+    else {
+      alert('Aquantidade solicitada está em')
+      cart[key].qty = stock
+    }
+    localStorage.setItem("productsCart", JSON.stringify(cart));
+  }
+  setCart(tempCart)
+  SumPrice(cart, setTotalPrice)
+  formatCart(cart)
 }
 
 const SumPrice = function (cart, setTotalPrice) {
@@ -43,7 +42,7 @@ export function Subtract(id, cart, setTotalPrice, setCart) {
   }
 
   for (let key in cart) {
-    if (cart[key].qty === 0){
+    if (cart[key].qty === 0) {
       delete cart[key]
     }
   }
@@ -54,11 +53,11 @@ export function Subtract(id, cart, setTotalPrice, setCart) {
 }
 
 
-export function deleteProductToCart (id, cart, setCart, setTotalPrice) {
+export function deleteProductToCart(id, cart, setCart, setTotalPrice) {
   let tempCart = cart
 
   for (let key in cart) {
-    if (key === id){
+    if (key === id) {
       delete cart[key]
     }
   }

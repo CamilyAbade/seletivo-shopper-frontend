@@ -30,14 +30,12 @@ export function postAndPut(input) {
       var stock = productsDB[key].qty_stock
       qtyProducts[id] = { id: id, stock: stock }
     }
-    console.log('CART PRODUCTS', cartProducts)
 
     for (let key in cartProducts) {
       var boughtQty = cartProducts[key].qty
       var availableQty = qtyProducts[key].stock
       var idProduct = qtyProducts[key].id
       var StockUpdate = availableQty - boughtQty
-      console.log('ID: ', idProduct)
     
       const body = {
         "id": idProduct,
@@ -48,9 +46,12 @@ export function postAndPut(input) {
       axios.put(`${BASE_URL}/stock/update`, body)
         .then((res) => {
           alert('Banco de estoque alterado com sucesso!')
+          localStorage.removeItem('productsCart');
+
+
         })
         .catch((err) => {
-          alert('Nome ou data inválidos')
+          alert('Erro ao diminuir no estoque, tente novamente')
         })
     }
   }

@@ -16,16 +16,13 @@ const Products = () => {
   const history = useHistory()
 
   const [products, setProducts] = useState([{}])
-
   const [cart, setCart] = useState({})
   const [totalPrice, setTotalPrice] = useState(0)
 
   localStorage.setItem("stock", JSON.stringify(products));
 
-
   useEffect(() => {
     getAllProducts(setProducts)
-
   }, []);
 
   const productsList = products.map((product) => {
